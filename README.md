@@ -156,6 +156,13 @@ Fetches unread messages and inserts them **directly into Gmail** using the Gmail
    - Under **Test users**, click **+ Add users**
    - Add the Gmail address you want to import emails into
    - Click **Save**
+  
+5. Publish the app:
+   - Still on the **OAuth consent screen**, click **Publish app** and confirm
+   - Google may show a warning that the app is not verified — this is expected for personal apps and can be safely dismissed
+
+> **Why this matters.** Apps left in *Testing* mode have their OAuth2 refresh tokens automatically revoked by Google after 7 days, causing an `invalid_grant: Token has been expired or revoked` error. Publishing the app removes this limit. The app does not become publicly accessible — it simply stops being subject to the testing restriction.
+
 
 ### Step 2 — Set up the credentials directory
 
